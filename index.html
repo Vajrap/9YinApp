@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9Yin App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="worktable/Resources.js"></script>
+    <script src="worktable/Tailor.js"></script>
+    <script src="worktable/worktable.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>9Yin App</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('worktable')">Worktable</a></li>
+            <li><a href="#" onclick="showSection('fnc1')">Function 1 (Fnc1)</a></li>
+            <li><a href="#" onclick="showSection('fnc2')">Function 2 (Fnc2)</a></li>
+            <li><a href="#" onclick="showSection('fnc3')">Function 3 (Fnc3)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>This is the Home section.</p>
+</section>
+
+<section id="worktable" style="display: none;">
+    <h2>Worktable</h2>
+    <div id="tailor-items">
+        <!--dynamic content will be added when loaded-->
+    </div>
+    <section id="player-helper" style="display: block;">
+        <!-- The player helper content will be dynamically added here -->
+    </section>
+    <script>
+        renderTailor()
+    </script>
+</section>
+
+<section id="fnc1" style="display: none;">
+    <h2>Function 1 (Fnc1)</h2>
+    <p>This is the Function 1 section.</p>
+</section>
+
+<section id="fnc2" style="display: none;">
+    <h2>Function 2 (Fnc2)</h2>
+    <p>This is the Function 2 section.</p>
+</section>
+
+<section id="fnc3" style="display: none;">
+    <h2>Function 3 (Fnc3)</h2>
+    <p>This is the Function 3 section.</p>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
