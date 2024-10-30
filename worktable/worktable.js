@@ -7,7 +7,10 @@ function renderTailor() {
         bottom1,
         boots1,
         shinguard1,
-        wristguard1
+        wristguard1,
+        ring_01,
+        earring_01,
+        amulet_01
     ]
 
     const tailorItemsContainer = document.getElementById("tailor-items");
@@ -48,7 +51,7 @@ function renderTailor() {
             const resourceQuantity = resource.quantity;
             const resourceObtain = resource.resource.obtain;
             const resourceItem = document.createElement("div");
-            resourceItem.innerHTML = `${resourceQuantity} * ${resourceName} : from -> ${resourceObtain}`;
+            resourceItem.innerHTML = `${resourceName}x${resourceQuantity}: </br>ได้จาก ${resourceObtain}</br>-----`;
             tooltip.appendChild(resourceItem);
         });
 
